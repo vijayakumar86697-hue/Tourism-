@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Ooty</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: url('ooty.jpeg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #2c3e50;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .places {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+      color: #1abc9c;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #1abc9c;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Ooty 🌿</h1>
+    <p>The Queen of Hill Stations</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#places">Places</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Ooty</h2>
+    <p style="text-align:center; max-width: 800px; margin:auto;">
+      Nestled in the Nilgiri Hills, Ooty is a picturesque hill station known for its lush tea gardens, serene lakes, and stunning landscapes. It’s a popular getaway for nature lovers, honeymooners, and adventure seekers alike.
+    </p>
+  </section>
+
+  <!-- Places -->
+  <section id="places">
+    <h2>Famous Places</h2>
+    <div class="places">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ooty_Lake_2.jpg" alt="Ooty Lake">
+        <h3>Ooty Lake</h3>
+        <p>A man-made lake perfect for boating, cycling, and enjoying the scenic views.</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Botanical_Garden%2C_Ooty.jpg" alt="Botanical Garden">
+        <h3>Botanical Garden</h3>
+        <p>A lush garden with rare flowers and a 20-million-year-old fossilized tree.</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Nilgiri_Mountain_Railway.jpg" alt="Toy Train">
+        <h3>Nilgiri Mountain Railway</h3>
+        <p>A UNESCO World Heritage toy train offering a mesmerizing ride through the hills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities">
+    <h2>Activities</h2>
+    <ul style="max-width:600px; margin:auto; font-size:1.1rem; line-height:2;">
+      <li>🚂 Ride the Nilgiri Mountain Railway</li>
+      <li>🌿 Walk through Tea Estates</li>
+      <li>🚴‍♂ Cycling around Ooty Lake</li>
+      <li>🌸 Visit Rose & Botanical Gardens</li>
+      <li>🥾 Trekking in the Nilgiris</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">For travel packages & inquiries, click below 👇</p>
+    <div style="text-align:center;">
+      <button onclick="showMessage()">Get in Touch</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Explore Ooty. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showMessage() {
+      alert("Thanks for your interest! 📩 Our travel agent will contact you soon.");
+    }
+  </script>
+</body>
+</html>
